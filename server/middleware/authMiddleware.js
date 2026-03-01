@@ -6,7 +6,7 @@ const authMiddleware= (req,res,next)=>{
         if(!token){
             return res.staus(400).json({message:"No token, access denied"});
         }
-        const decoded=jwt.verify(token,process.env.JWT_TOKEN);
+        const decoded=jwt.verify(token,process.env.JWT_SECRET);
         req.userId=decoded.userId;
         next();
     }
@@ -14,3 +14,5 @@ const authMiddleware= (req,res,next)=>{
         res.status(401).json({message:"Invalid Token"});
     }
 };
+
+module.exports=authMiddleware;

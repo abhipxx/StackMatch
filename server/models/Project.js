@@ -9,7 +9,7 @@ const projectSchema=new mongoose.Schema({
         type:String,
         default:" "
     },
-    languages:{
+    skills:{
         type:[String],
         required:true
     },
