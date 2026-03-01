@@ -9,9 +9,11 @@ app.use(cors());
 app.use(express.json());
 
 const authRoutes = require('./routes/authRoutes');const projectRoutes=require('./routes/projectRoutes');
+const matchRoutes=require('./routes/matchRoutes');
 
 app.use('/api/auth', authRoutes);
 app.use('/api/projects',projectRoutes);
+app.use('/api/match',matchRoutes);
 
 app.get('/',(req,res)=>{
     res.json({message:'StackMatch API is running'});
