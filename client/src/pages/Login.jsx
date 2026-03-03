@@ -1,14 +1,11 @@
 import api from "../services/api";
 import {useState} from "react"; 
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate,Link } from "react-router-dom"; 
 import { useAuth } from "../context/AuthContext";
 
 function Login(){
     const {login}=useAuth();
     const navigate=useNavigate();
-    const onregclick=()=>{
-        navigate('/register');
-    }
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
 
@@ -29,11 +26,11 @@ function Login(){
         <h3>Login Page</h3>
         <br/>
         <form onSubmit={handleSubmit}>
-        Enter your email:<input type="email" value={email} onChange={(e)=>setEmail(e.target.value)}/>
-        Enter your password<input type="password" value={password} onChange={(p)=>setPassword(p.target.value)}/> 
+        Enter your email:<input type="email" value={email} onChange={(e)=>setEmail(e.target.value)}/><br />
+        Enter your password<input type="password" value={password} onChange={(p)=>setPassword(p.target.value)}/> <br/>
         <button type="submit">SUBMIT</button>
         <br />
-        <button onClick={onregclick}> Do not have an account?Register </button>
+        <Link to="/register"> Do not have an account?Register</Link>
         </form>
         </>
     )
