@@ -1,4 +1,5 @@
 import { useState,useEffect } from "react";
+import { Link } from "react-router-dom";
 import api from "../services/api";
 
 
@@ -28,6 +29,7 @@ function Projects(){
                     <p>{project.description}</p>
                     <p>Skills:{project.skills.join(',')}</p>
                     <p>Owner:{project.owner.name}</p>
+                    <Link to={`/match/${project._id}`}>Find Matches</Link>
                 </div>
             ))}
         </div>
