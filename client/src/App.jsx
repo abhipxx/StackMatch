@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Projects from "./pages/Projects";
 import Create_project from "./pages/Create-project";
 import Match from "./pages/Match";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App(){
     return(
@@ -14,10 +15,10 @@ function App(){
        <Routes>
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/register" element={<Register/>}></Route>
-        <Route path="/dashboard" element={<Dashboard/>}></Route>
-        <Route path="/projects" element={<Projects/>}></Route>
-        <Route path="/create-project" element={<Create_project/>}></Route>
-        <Route path="/match/:projectId" element={<Match/>}></Route>
+        <Route path="/dashboard" element={<ProtectedRoute><Dashboard/></ProtectedRoute>}></Route>
+        <Route path="/projects" element={<ProtectedRoute><Projects/></ProtectedRoute>}></Route>
+        <Route path="/create-project" element={<ProtectedRoute><Create_project/></ProtectedRoute>}></Route>
+        <Route path="/match/:projectId" element={<ProtectedRoute><Match/></ProtectedRoute>}></Route>
        </Routes>
        </>
     )
