@@ -7,6 +7,7 @@ import Projects from "./pages/Projects";
 import Create_project from "./pages/Create-project";
 import Match from "./pages/Match";
 import ProtectedRoute from "./components/ProtectedRoute";
+import AIAssistant from "./pages/AIAssistant";
 
 function App(){
     return(
@@ -19,6 +20,7 @@ function App(){
         <Route path="/projects" element={<ProtectedRoute><Projects/></ProtectedRoute>}></Route>
         <Route path="/create-project" element={<ProtectedRoute><Create_project/></ProtectedRoute>}></Route>
         <Route path="/match/:projectId" element={<ProtectedRoute><Match/></ProtectedRoute>}></Route>
+        <Route path="/ai-assistant" element={<ProtectedRoute><AIAssistant /></ProtectedRoute>}></Route>
        </Routes>
        </>
     )
