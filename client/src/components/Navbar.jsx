@@ -17,6 +17,7 @@ function Navbar(){
             {user?(
                 <>
                 <Link to="/projects">Browse Projects</Link><br/>
+                <Link to="/ai-assistant">AI-Assistant</Link>
                 <button onClick={handleLogout}>Logout</button><br/>
                 </>
             ):(
