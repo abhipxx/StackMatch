@@ -18,6 +18,8 @@ function Dashboard(){
     return(
         <>
         <h3>Welcome {user.name}</h3>
+        <button onClick={() => navigate('/projects')}>Browse Projects</button>
+        <button onClick={() => navigate('/create-project')}>Create Project</button>
         <button onClick={handleLogout}>Logout</button>
         </>
     );

@@ -22,6 +22,7 @@ function Projects(){
 
     return(
         <div>
+            <Link to="/create-project">+ Create New Project</Link>
             <h2>All projects</h2>
             {projects.map((project)=>(
                 <div key={project._id}>
