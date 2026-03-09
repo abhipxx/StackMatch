@@ -21,10 +21,10 @@ function Projects(){
     },[]);
 
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
+    <div className="min-h-screen bg-blue-900 p-8">
       <div className="max-w-5xl mx-auto">
         <div className="flex items-center justify-between mb-8">
-          <h2 className="text-3xl font-bold text-gray-800">All Projects</h2>
+          <h2 className="text-3xl font-bold text-white">All Projects</h2>
           <Link to="/create-project" className="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-lg transition font-medium">
             Create New Project
           </Link>

@@ -12,8 +12,7 @@ function Navbar(){
     }
     return(
         <nav className="bg-gray-900 text-white px-6 py-4 flex items-center justify-between">
-            <Link to='/dashboard'>StackMatch</Link>
-            <br/>
+            <Link to='/dashboard' className="text-xl font-bold text-blue-400">StackMatch</Link>
             <div className="flex items-center gap-6">
             {user?(
                 <>
@@ -23,8 +22,8 @@ function Navbar(){
                 </>
             ):(
                 <>
-                <Link to="/login" className="hover:text-blue-400 transition">Login</Link><br/>
-                <Link to="/register" className="bg-red-500 hover:bg-blue-600 px-4 py-2 rounded-lg transition">Register</Link>
+                <Link to="/login" className="hover:text-blue-400 transition">Login</Link>
+                <Link to="/register" className="bg-blue-600 hover:bg-blue-600 px-4 py-2 rounded-lg transition">Register</Link>
                 </>
             )}
             </div>
