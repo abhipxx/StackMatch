@@ -1,4 +1,3 @@
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 const express=require('express');
 const mongoose=require('mongoose');
 const cors=require('cors');
@@ -21,11 +20,7 @@ app.get('/',(req,res)=>{
     res.json({message:'StackMatch API is running'});
 });
 
-mongoose.connect(process.env.MONGO_URI, {
-  tls: true,
-  tlsAllowInvalidCertificates: true,
-  tlsAllowInvalidHostnames: true
-})
+mongoose.connect(process.env.MONGO_URI)
 .then(()=>{
     console.log('MongoDB connected');
     app.listen(process.env.PORT || 5000,()=>{
