@@ -31,6 +31,10 @@ const userSchema=new mongoose.Schema({
         type:Number,
         default:0
     },
+    isAvailable: {
+        type: Boolean,
+        default: true
+    },
     github:{
         type:String,
         default:" "

@@ -30,6 +30,11 @@ const projectSchema=new mongoose.Schema({
         type:String,
         enum:['open','in-progress','completed'],
         default:'open'
+    },
+    experienceLevel: {
+        type: String,
+        enum: ['beginner', 'intermediate', 'advanced'],
+        default: 'beginner'
     }
 }
 ,{timestamps:true});

@@ -8,6 +8,7 @@ import Create_project from "./pages/Create-project";
 import Match from "./pages/Match";
 import ProtectedRoute from "./components/ProtectedRoute";
 import AIAssistant from "./pages/AIAssistant";
+import Home from "./pages/Home"
 
 function App(){
     return(
@@ -21,6 +22,7 @@ function App(){
         <Route path="/create-project" element={<ProtectedRoute><Create_project/></ProtectedRoute>}></Route>
         <Route path="/match/:projectId" element={<ProtectedRoute><Match/></ProtectedRoute>}></Route>
         <Route path="/ai-assistant" element={<ProtectedRoute><AIAssistant /></ProtectedRoute>}></Route>
+        <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>}></Route>
        </Routes>
        </>
     )

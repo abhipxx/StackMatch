@@ -51,6 +51,13 @@ function Match(){
                 <div className="flex items-center gap-4 text-sm text-gray-500">
                   <span>⭐{match.user.rating} Rating</span>
                   <span>💼{match.user.yoe} YOE</span>
+                  <div className="flex items-center justify-between mt-4">
+                    {match.user.isAvailable && (<span className="bg-green-100 text-green-600 px-2 py-1 rounded-full text-xs font-medium">
+                    Available
+                  </span>)}
+                  {match.user.github && (<a href={match.user.github.startsWith('http') ? match.user.github : `https://${match.user.github}`} target="_blank" rel="noreferrer" className="text-blue-500 hover:underline text-sm font-medium">View GitHub →</a>
+                )}
+                </div>
                 </div>
               </div>
             ))}

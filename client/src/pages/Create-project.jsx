@@ -9,18 +9,20 @@ function Create_project(){
     const [title,setTitle]=useState("");
     const [description,setDescription]=useState("");
     const[skills,setSkills]=useState("");
+    const [experienceLevel, setExperienceLevel] = useState('beginner');
     const[github,setGithub]=useState("");
     const [membersNeeded,setMembersNeeded]=useState(0);
 
     const handleSubmit=async (e)=>{
         e.preventDefault();
         try{
-            await api.post('/projects',{
+            await api.post('/projects', {
                 title,
                 description,
-                skills:skills.split(',').map(s=>s.trim()),
+                skills: skills.split(',').map(s => s.trim()),
                 github,
-                membersNeeded
+                membersNeeded,
+                experienceLevel
             });
             navigate('/projects');
         }catch(error){
@@ -57,6 +59,14 @@ function Create_project(){
               className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500"
               placeholder="React, Node, MongoDB (comma separated)"
             />
+          </div>
+          <div className="mb-4">
+            <label className="block text-gray-700 mb-1 font-medium">Experience Level</label>
+            <select value={experienceLevel} onChange={(e) => setExperienceLevel(e.target.value)} className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500 bg-white">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
           </div>
           <div className="mb-4">
             <label className="block text-gray-700 mb-1 font-medium">GitHub</label>
