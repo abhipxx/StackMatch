@@ -4,7 +4,13 @@ const cors=require('cors');
 require('dotenv').config();
 
 const app=express();
-app.use(cors());
+
+const corsOptions = {
+  origin: ['http://localhost:5173', 'https://stack-match-nine.vercel.app/'],
+  credentials: true
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 const authRoutes = require('./routes/authRoutes');const projectRoutes=require('./routes/projectRoutes');
