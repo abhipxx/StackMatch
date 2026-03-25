@@ -22,7 +22,7 @@ function App(){
         <Route path="/create-project" element={<ProtectedRoute><Create_project/></ProtectedRoute>}></Route>
         <Route path="/match/:projectId" element={<ProtectedRoute><Match/></ProtectedRoute>}></Route>
         <Route path="/ai-assistant" element={<ProtectedRoute><AIAssistant /></ProtectedRoute>}></Route>
-        <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>}></Route>
+        <Route path="/" element={<Home />}></Route>
        </Routes>
        </>
     )

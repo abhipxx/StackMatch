@@ -12,7 +12,7 @@ function Navbar(){
     }
     return(
         <nav className="bg-gray-900 text-white px-6 py-4 flex items-center justify-between">
-            <Link to='/dashboard' className="text-xl font-bold text-blue-400">StackMatch</Link>
+            <Link to='/' className="text-xl font-bold text-blue-400">StackMatch</Link>
             <div className="flex items-center gap-6">
             {user?(
                 <>
