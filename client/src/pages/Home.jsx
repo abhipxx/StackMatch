@@ -59,9 +59,6 @@ function Home() {
           <span>Gemini AI</span>
         </div>
       </div>
-      <div className="text-center py-6 text-gray-600 text-sm">
-        Built by Abhipsa — <a href="https://github.com/yourusername" target="_blank" rel="noreferrer" className="hover:text-blue-400 transition">GitHub</a>
-      </div>
     </div>
   );
 }
